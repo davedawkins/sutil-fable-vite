@@ -7,3 +7,6 @@ Starter project for Sutil + Fable + Vite + Docker container (nginx)
 
 ## How to stop the Docker container
 - Run `npm run stop-container` to stop the container
+
+## How to build Docker image only
+- Run `npm run build-image` to build the Docker image
