@@ -7,7 +7,10 @@
     "build": "dotnet fable src/App -o build && vite build",
     "start": "dotnet fable watch src/App --verbose -o build --run vite",
     "preview": "vite preview",
-    "clean": "dotnet fable clean -o build --yes"
+    "clean": "dotnet fable clean -o build --yes",
+    "start-container": "npm run build && docker compose up -d sutil-fable-vite",
+    "stop-container": "docker compose down sutil-fable-vite",
+    "build-image": "npm run build && docker compose build sutil-fable-vite"
   },  
   "devDependencies": {
     "vite": "^5.1.4"
