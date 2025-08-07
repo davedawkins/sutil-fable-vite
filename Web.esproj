@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/1.0.3498087">
+  <PropertyGroup>
+    <PackageJsonDirectory>$(MSBuildProjectDirectory)\</PackageJsonDirectory>
+    <StartupCommandWorkingDirectory>$(MSBuildProjectDirectory)\</StartupCommandWorkingDirectory>
+    <!-- Folder where production build objects will be placed -->
+    <BuildOutputFolder>$(MSBuildProjectDirectory)\dist</BuildOutputFolder>
+    <StartupCommand>npm run start</StartupCommand>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="dist\**" />
+    <None Remove="src\App\**" />
+    <TypeScriptConfiguration Remove="dist\**" />
+    <TypeScriptConfiguration Remove="src\App\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="package.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptConfiguration Include="package.json" />
+  </ItemGroup>
+</Project>
